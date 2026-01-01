@@ -86,7 +86,6 @@ def download_movielens():
     
     return data_dir
 
-
 def load_movielens_data(data_dir):
     """
     Load and parse the MovieLens 100K data files.
@@ -235,7 +234,7 @@ class MovieLensGraph:
         
         self.edge_index = torch.tensor([src_nodes, dst_nodes], dtype=torch.long)
         
-        print(f"  Number of edges (bidirectional): {self.edge_index.shape[1]}")
+        print(f"Number of edges (bidirectional): {self.edge_index.shape[1]}")
         
         # Store user-movie interactions for train/test split
         self.user_movie_interactions = defaultdict(set)
